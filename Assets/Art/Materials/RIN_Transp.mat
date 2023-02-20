@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RIN_Solid
+  m_Name: RIN_Transp
   m_Shader: {fileID: 4800000, guid: f3a886fe63a76ce46a797f40b7727eda, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []

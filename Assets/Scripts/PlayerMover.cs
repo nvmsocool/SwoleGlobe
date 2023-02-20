@@ -109,4 +109,50 @@ public class PlayerMover : MonoBehaviour
         }
         return ret;
     }
+
+    Vector3 priorVel, priorPos, priorLine;
+    
+    private void ProcessSwing(UnityEngine.XR.InputDevice device)
+    {
+        // track how similar the devices movement is to a straight spherical swing
+        // given a collection of points, what is the equation of a sphere that minimizes the sum of distances of said points to the surface
+        // a, b: a_to_b, v_a x v_b, and cross of those 2. center = closest point between those two lines
+        // swing score = consistency of center, head's distance from percieved center, distance hand travelled
+
+        Vector3 ret = Vector3.zero;
+        if (!device.isValid)
+            return;
+
+        bool triggerValue;
+        if (!device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) || !triggerValue)
+            return;
+
+        Vector3 vel;
+        if (!device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.deviceVelocity, out vel))
+            return;
+
+        Vector3 pos;
+        if (!device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.devicePosition, out pos))
+            return;
+
+        // get line toward pivot point
+        Vector3 a = (pos - priorPos).normalized;
+        Vector3 b = Vector3.Cross(priorVel, vel).normalized;
+        Vector3 line = Vector3.Cross(a, b);
+
+        // estimate pivot point as closes intersection with prior
+
+
+        // score trajectory
+
+
+        // store results for next cycle
+        priorVel = vel;
+        priorPos = pos;
+        priorLine = line;
+
+        return;
+
+    }
+
 }
