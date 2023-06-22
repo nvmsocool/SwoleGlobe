@@ -6,10 +6,6 @@ Shader "Custom/RenderIfNear"
     _MainTex("Albedo (RGB)", 2D) = "white" {}
     _Glossiness("Smoothness", Range(0,1)) = 0.5
     _Metallic("Metallic", Range(0,1)) = 0.0
-
-      // Expose parameters for the minimum x, minimum z,
-      // maximum x, and maximum z of the rendered volume.
-      _Radius("radius", Float) = 1.0
   }
     SubShader
     {

@@ -1,0 +1,1 @@
+public class EventListenerInt : EventListenerBase<int> {}

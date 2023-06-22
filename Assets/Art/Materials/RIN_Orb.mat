@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RIN_Solid
+  m_Name: RIN_Orb
   m_Shader: {fileID: 4800000, guid: f3a886fe63a76ce46a797f40b7727eda, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -77,6 +77,6 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Center: {r: 0.1, g: 0.84, b: 3.34, a: 1}
-    - _Color: {r: 0.6515738, g: 1, b: 0.57075465, a: 0.6745098}
+    - _Color: {r: 1, g: 0.05809614, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
